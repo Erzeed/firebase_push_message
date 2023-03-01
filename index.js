@@ -68,7 +68,7 @@ function getAccessToken() {
       const jwtClient = new google.auth.JWT(
         key.client_email,
         null,
-        process.env.data_private_key,
+        process.env.data_private_key.replace(/\\n/gm, "\n"),
         SCOPES,
         null
       );
