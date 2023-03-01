@@ -1,0 +1,16 @@
+{
+  "name": "send_push_message",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "18.12.1"
+  },
+  "dependencies": {
+    "googleapis": "^111.0.0",
+    "http": "^0.0.1-security"
+  }
+}
