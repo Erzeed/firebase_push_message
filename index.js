@@ -13,6 +13,14 @@ const port = 9000;
 
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json());
+
+app.get('/', (req, res) => {
+  res.send({
+      status:200,
+      results:'haii -_-'
+  });
+});
+
 router.post('/send', (req,resp) => {
 
   getAccessToken().then(acces_token => {
