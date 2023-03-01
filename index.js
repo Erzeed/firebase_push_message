@@ -14,6 +14,14 @@ const port = process.env.PORT || 3000;;
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json());
 
+app.use(function(req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,PATCH, POST, PUT, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  next();
+});
+
 app.get('/', (req, res) => {
   res.send({
       status:200,
