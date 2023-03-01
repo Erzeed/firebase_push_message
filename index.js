@@ -41,11 +41,12 @@ router.post('/send', (req,resp) => {
             "body": body
           }
         }
-  }
+      }
       )
     }, function(error, response, body){
       resp.end(body);
     })
+    resp.end(acces_token)
   })
 })
 
