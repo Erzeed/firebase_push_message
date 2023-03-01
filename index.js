@@ -46,6 +46,11 @@ router.post('/send', (req,resp) => {
     }, function(error, response, body){
       resp.end(body);
     })
+  })
+})
+
+router.get('/get-token', (req,resp) => {
+  getAccessToken().then(acces_token => {
     resp.end(acces_token)
   })
 })
@@ -63,7 +68,7 @@ function getAccessToken() {
       const jwtClient = new google.auth.JWT(
         key.client_email,
         null,
-        key.private_key,
+        process.env.data_private_key,
         SCOPES,
         null
       );
