@@ -9,7 +9,7 @@ const router = express.Router();
 const dotenv  = require("dotenv")
 dotenv.config()
 
-const port = 9000;
+const port = process.env.PORT || 3000;;
 
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json());
