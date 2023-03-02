@@ -35,6 +35,7 @@ router.post('/send', (req,resp) => {
     const title = req.body.title
     const body = req.body.body
     const token = req.body.token
+    const icon = req.body.icon
 
     request.post({
       headers: {
@@ -44,9 +45,12 @@ router.post('/send', (req,resp) => {
       body: JSON.stringify(
         {"message": {
           "token": token,
-          "notification": {
-            "title": title,
-            "body": body
+          "webpush": {
+            "notification": {
+              "title": title,
+              "body": body,
+              "icon": "https://firebasestorage.googleapis.com/v0/b/wgther-b4fc3.appspot.com/o/logo%2Flogo.png?alt=media&token=371c3809-e841-4a66-ae2d-05fe1de61cdb"
+            }
           }
         }
       }
