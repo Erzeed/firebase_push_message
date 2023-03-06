@@ -49,7 +49,8 @@ router.post('/send', (req,resp) => {
             "notification": {
               "title": title,
               "body": body,
-              "icon": "https://firebasestorage.googleapis.com/v0/b/wgther-b4fc3.appspot.com/o/logo%2Flogo.png?alt=media&token=371c3809-e841-4a66-ae2d-05fe1de61cdb"
+              "icon": "https://firebasestorage.googleapis.com/v0/b/wgther-b4fc3.appspot.com/o/logo%2Flogo.png?alt=media&token=371c3809-e841-4a66-ae2d-05fe1de61cdb",
+              "click_action": "https://task-management-beta.vercel.app/#/todo"
             }
           }
         }
